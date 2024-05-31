@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שימוש ב-cookies</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-right p-6">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold mb-4">שימוש ב-cookies או עוגיות</h1>
+        <form id="userForm" class="space-y-4">
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700">שם משתמש:</label>
+                
+                <input type="text" id="username" name="username" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div>
+                <label for="age" class="block text-sm font-medium text-gray-700">גיל:</label>
+                <input type="number" id="age" name="age" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div>
+                <label for="city" class="block text-sm font-medium text-gray-700">עיר:</label>
+                <input type="text" id="city" name="city" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div class="flex space-x-2 space-x-reverse">
+                <button type="button" onclick="saveCookies()" class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600">שמור</button>
+                <button type="button" onclick="deleteCookie('username')" class="bg-red-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-red-600">מחק שם משתמש</button>
+                <button type="button" onclick="deleteCookie('age')" class="bg-red-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-red-600">מחק גיל</button>
+                <button type="button" onclick="deleteCookie('city')" class="bg-red-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-red-600">מחק עיר</button>
+            </div>
+        </form>
+        <h2 class="text-xl font-bold mt-6">הודעה:</h2>
+        <p id="message" class="mt-2 text-gray-700"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
